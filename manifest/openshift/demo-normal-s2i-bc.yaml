@@ -1,0 +1,17 @@
+kind: BuildConfig
+apiVersion: v1
+metadata:
+  name: demo-normal-s2i
+spec:
+  source:
+    git:
+      uri: https://github.com/adambkaplan/s2i-assemble-user-demo.git
+  strategy:
+    sourceStrategy:
+      from: 
+        kind: ImageStreamTag
+        name: s2i-normal:latest
+  output:
+    to: 
+      kind: ImageStreamTag
+      name: s2i-build-output:latest

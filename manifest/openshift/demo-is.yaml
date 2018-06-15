@@ -1,0 +1,15 @@
+---
+kind: ImageStream
+apiVersion: v1
+metadata:
+  name: s2i-build-output
+---
+kind: ImageStream
+apiVersion: v1
+metadata:
+  name: s2i-root
+---
+kind: ImageStream
+apiVersion: v1
+metadata:
+  name: s2i-normal
